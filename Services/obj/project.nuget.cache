@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "etttIZz3X6htQ1q0w/G4X976gKNqKLn6/5dL9/GsNdEfKkQyAcr/7r07upYijLh+PyCV/ebhIj6i2yGcNLAStA==",
+  "dgSpecHash": "pJCdXOhqXQSaM6khMweDMmlvsu132fc8iQ2RbXGgu1zvDXqgJs1Ies6fEKUTLvU9fMTJuZ6vPv4E2xHRMvOG0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\talle\\OneDrive\\Área de Trabalho\\Projects\\Back-End C#\\UnitTest\\ApiWithUnitTest\\Services\\Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\talle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

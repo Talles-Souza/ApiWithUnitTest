@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oyokRY55qoUq9mPkG1ss2WNoj6N1mxWg4FFqdo4WgAqCcqMHwLdLXzFYp4eimkqb3omNLwFPynomkZ0NPjjQPg==",
+  "dgSpecHash": "4/RuAcbv/70/6QKyV5xH7NwkjwdeY3vNeSYpOPOCDjTrCuk0mIgOZHUpnVZ4TmWxA2WRfHYP5MLW/dnYcqWmNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\talle\\OneDrive\\Área de Trabalho\\Projects\\Back-End C#\\UnitTest\\ApiWithUnitTest\\Settings\\CrossCutting.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

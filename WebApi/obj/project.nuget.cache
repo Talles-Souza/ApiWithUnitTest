@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ssip1M/IpPlT2vL4zL9nCVHCGe7JoQ6Eql++jIa0r9lyn4hN4TTVjKgX1ElQA1pCVtAFLDEOL4bjK72528jkHA==",
+  "dgSpecHash": "AanekF898fWOiYTSVhJk3Mj8h9Gr5PVEejwyndcHBPpucCtqxjveAC9ruBqp7j9vR+7sh9PM2Ug/f5ZTUhODKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\talle\\OneDrive\\Área de Trabalho\\Projects\\Back-End C#\\UnitTest\\ApiWithUnitTest\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
