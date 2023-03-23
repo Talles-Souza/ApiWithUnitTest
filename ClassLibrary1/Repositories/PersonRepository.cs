@@ -2,11 +2,6 @@
 using Domain.Entities;
 using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Repositories
 {
@@ -31,14 +26,28 @@ namespace Data.Repositories
             return person;
         }
 
-        public Task<Person> Create(Person user)
+        public async Task<Person> Create(Person person)
         {
-            throw new NotImplementedException();
+            db.People.Add(person);
+            db.SaveChanges();
+            return person;
         }
 
-        public Task<bool> Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                Person person = await db.People.SingleOrDefaultAsync(x => x.Id == id);
+                if (person == null) return false;
+                db.People.Remove(person);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+             return false;
+            }
         }
 
     }

@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Data.Context;
+using Data.Repositories;
+using Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CrossCutting.Settings
 {
@@ -12,8 +11,8 @@ namespace CrossCutting.Settings
     {
         public static IServiceCollection AddInfrastruture(this IServiceCollection services, IConfiguration configuration)
         {
-            // services.AddDbContext<ContextDb>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
-           // services.AddScoped<IUserRepository, UserRepository>();
+            services.AddDbContext<ContextDb>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IPersonRepository, PersonRepository>();
             return services;
         }
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)

@@ -17,3 +17,5 @@ C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithU
 C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithUnitTest\Settings\bin\Debug\net6.0\Domain.pdb
 C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithUnitTest\Settings\bin\Debug\net6.0\Services.pdb
 C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithUnitTest\Settings\obj\Debug\net6.0\CrossCutting.csproj.CopyComplete
+C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithUnitTest\Settings\bin\Debug\net6.0\CrossCutting.runtimeconfig.json
+C:\Users\talle\OneDrive\Área de Trabalho\Projects\Back-End C#\UnitTest\ApiWithUnitTest\Settings\obj\Debug\net6.0\CrossCutting.genruntimeconfig.cache
