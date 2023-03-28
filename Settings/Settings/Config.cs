@@ -4,6 +4,9 @@ using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Services;
+using Services.Interfaces;
+using Services.Mapping;
 
 namespace CrossCutting.Settings
 {
@@ -17,7 +20,8 @@ namespace CrossCutting.Settings
         }
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
-           
+            services.AddScoped<IPersonService, PersonService>();
+            services.AddAutoMapper(typeof(ToMappingDTO));
             return services;
 
         }

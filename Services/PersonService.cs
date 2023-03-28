@@ -2,28 +2,25 @@
 using Domain.Repositories;
 using Services.DTOs;
 using Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services
 {
-    public class Person : IPersonService
+    public class PersonService : IPersonService
     {
         private readonly IPersonRepository personRepository;
         private readonly IMapper mapper;
 
-        public Person(IPersonRepository personRepository, IMapper mapper)
+        public PersonService(IPersonRepository personRepository, IMapper mapper)
         {
             this.personRepository = personRepository;
             this.mapper = mapper;
         }
 
-        public Task<ICollection<PersonDTO>> FindAll()
+        public async Task<ICollection<PersonDTO>> FindAll()
         {
-            throw new NotImplementedException();
+            var people =  await personRepository.FindAll();
+            var peopleDTO = mapper.Map<ICollection<PersonDTO>>(people);
+            return peopleDTO;
         }
 
         public Task<PersonDTO> FindById(int id)

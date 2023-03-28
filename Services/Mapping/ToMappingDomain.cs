@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace Services.Mapping
 {
-    public class ToMappingDTO : Profile
+    public class ToMappingDomain : Profile
     {
-        public ToMappingDTO()
+        public ToMappingDomain()
         {
-            CreateMap<PersonDTO, Person>();
+            CreateMap<Person, PersonDTO>();
         }
+
+       
     }
 }
