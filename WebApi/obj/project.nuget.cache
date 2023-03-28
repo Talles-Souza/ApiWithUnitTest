@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AanekF898fWOiYTSVhJk3Mj8h9Gr5PVEejwyndcHBPpucCtqxjveAC9ruBqp7j9vR+7sh9PM2Ug/f5ZTUhODKQ==",
+  "dgSpecHash": "ApeJRmq3URKrRTb1FjI7syITnyI1CEuwSOBFBuWaOHYzXJ9lHPp0AKYkwZ6hEjt/rOO+lOGpkOm54YzvEVJf1g==",
   "success": true,
   "projectFilePath": "C:\\Users\\talle\\OneDrive\\Área de Trabalho\\Projects\\Back-End C#\\UnitTest\\ApiWithUnitTest\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\talle\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",

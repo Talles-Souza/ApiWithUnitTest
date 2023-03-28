@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pJCdXOhqXQSaM6khMweDMmlvsu132fc8iQ2RbXGgu1zvDXqgJs1Ies6fEKUTLvU9fMTJuZ6vPv4E2xHRMvOG0Q==",
+  "dgSpecHash": "p3JbeL2JkgrjNDXSBwAHJp83nz4iBSSz3LsRs1OX2TZyIMkng1SggdSltWOscVwQHj9/L+t34wE3o1evtydUOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\talle\\OneDrive\\Área de Trabalho\\Projects\\Back-End C#\\UnitTest\\ApiWithUnitTest\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\talle\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\talle\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\talle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
   ],
   "logs": []
