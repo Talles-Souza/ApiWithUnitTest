@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Domain.Entities;
 using Domain.Repositories;
 using Services.DTOs;
 using Services.Exceptions;
 using Services.Interfaces;
-using System.Collections.Generic;
 
 namespace Services
 {
@@ -32,14 +32,21 @@ namespace Services
             return ResultService.Ok<PersonDTO>(200,mapper.Map<PersonDTO>(person));
         }
 
-        public Task<ResultService<PersonDTO>> Create(PersonDTO personDTO)
+        public async Task<ResultService<PersonDTO>> Create(PersonDTO personDTO)
         {
-            throw new NotImplementedException();
+            if(personDTO == null) return ResultService.Fail<PersonDTO>(400, "User must be informed");
+            var person = mapper.Map<Person>(personDTO);
+            var data = await personRepository.Create(person);
+            return ResultService.Ok<PersonDTO>(200, mapper.Map<PersonDTO>(data));
         }
 
-        public Task<ResultService<bool>> Delete(int id)
+        public async Task<ResultService> Delete(int id)
         {
-            throw new NotImplementedException();
+           if (id <= 0) return ResultService.Fail<PersonDTO>(406, "Invalid informed value");
+           var person = await personRepository.FindById(id);
+           if (person == null) return ResultService.Fail<PersonDTO>(404, "User not Found");
+           await personRepository.Delete(id);
+           return ResultService.Ok(200, "Person with the id  " + id + " was successfully deleted");
         }
     }
 }

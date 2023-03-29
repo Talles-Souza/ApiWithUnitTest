@@ -8,7 +8,7 @@ namespace Services.Interfaces
         Task<ResultService<ICollection<PersonDTO>>> FindAll();
         Task<ResultService<PersonDTO>> FindById(int id);
         Task<ResultService<PersonDTO>> Create(PersonDTO personDTO);
-        Task<ResultService<bool>> Delete(int id);
+        Task<ResultService> Delete(int id);
 
     }
 }
