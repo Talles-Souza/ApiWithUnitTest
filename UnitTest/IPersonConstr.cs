@@ -8,8 +8,8 @@ namespace Application.Test
 {
     public class IPersonConstr
     {
-        Mock<Person> _person;
-        Fixture _fixture;
+       protected readonly Mock<Person> _person;
+       protected readonly Fixture _fixture;
         protected IPersonConstr(Mock<Person> mUser, Fixture fixture)
         {
             _person = mUser;
