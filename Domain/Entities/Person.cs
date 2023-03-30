@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Domain.Repositories;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    public class Person
+    public class Person 
     {
         [Column("id")]
         [Key] public int Id { get; set; }

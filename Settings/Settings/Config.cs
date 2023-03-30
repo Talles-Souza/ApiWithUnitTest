@@ -1,5 +1,6 @@
 ﻿using Data.Context;
 using Data.Repositories;
+using Domain.Entities;
 using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
