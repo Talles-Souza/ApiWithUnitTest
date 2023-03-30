@@ -12,7 +12,6 @@ namespace Application.Test
     {
         Mock<IPersonRepository> _person;
         Mock<IMapper> _mapper;
-        Mock<Person> person;
         Fixture _fixture;
         PersonService _personService;
         
@@ -22,7 +21,6 @@ namespace Application.Test
             _person = new Mock<IPersonRepository>();
             _mapper = new Mock<IMapper>();
             _fixture = new Fixture();
-            person = new Mock<Person>();
             _personService = new PersonService(_person.Object,_mapper.Object);
         }
         //FindByIdSuccess 
@@ -30,9 +28,9 @@ namespace Application.Test
         [Test]
         public void IdSuccess()
         {
-           
             //montar
-            Person personMock = IPersonConstr.One().WithId(_fixture.Create<int>()).WithName(_fixture.Create<string>()).WithEmail(_fixture.Create<string>()).Build();
+            //Person personMock = IPersonConstr.One().WithId(_fixture.Create<int>()).WithName(_fixture.Create<string>()).WithEmail(_fixture.Create<string>()).Build();
+            Person personMock = IPersonConstr.One().Standard();
             
             // criar Moq da função findbyid
             var person = _person.Setup(o => o.FindById(It.IsAny<int>())).ReturnsAsync(personMock);
@@ -49,23 +47,16 @@ namespace Application.Test
         [Test]
         public void IdSpecificSuccess()
         {
-
-            //montar
-            Person personMock = IPersonConstr.One().WithId(_fixture.Create<int>()).WithName(_fixture.Create<string>()).WithEmail(_fixture.Create<string>()).Build();
-            
-            // criar Moq da função findbyid
+            Person personMock = IPersonConstr.One().Standard();
             var person = _person.Setup(o => o.FindById(personMock.Id)).ReturnsAsync(personMock);
-
-
-            //executa
-            //criar o findbyid do user
             Task<Person> result = _person.Object.FindById(personMock.Id);
-
-            //verifica
-            Assert.AreEqual(personMock.Id, result.Result.Id);
-            Assert.AreEqual(personMock.Name, result.Result.Name);
-
+            Assert.Multiple(() =>
+            {
+                Assert.That(result.Result.Id, Is.EqualTo(personMock.Id));
+                Assert.That(result.Result.Name, Is.EqualTo(personMock.Name));
+            });
         }
+
         //FindByIdFail
         [Test]
         public void FindByIdFail()
