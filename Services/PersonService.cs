@@ -37,7 +37,7 @@ namespace Services
             if(personDTO == null) return ResultService.Fail<PersonDTO>(400, "User must be informed");
             var person = mapper.Map<Person>(personDTO);
             var data = await personRepository.Create(person);
-            return ResultService.Ok<PersonDTO>(200, mapper.Map<PersonDTO>(data));
+            return ResultService.Ok<PersonDTO>(201, mapper.Map<PersonDTO>(data));
         }
 
         public async Task<ResultService> Delete(int id)
@@ -48,5 +48,6 @@ namespace Services
            await personRepository.Delete(id);
            return ResultService.Ok(200, "Person with the id  " + id + " was successfully deleted");
         }
+
     }
 }

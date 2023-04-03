@@ -19,8 +19,7 @@ namespace Application.Test
         public void IdSuccess()
         {
             //montar
-            //Person personMock = IPersonConstr.One().WithId(_fixture.Create<int>()).WithName(_fixture.Create<string>()).WithEmail(_fixture.Create<string>()).Build();
-            var personMock = IPersonConstr.One().Standard();
+            var personMock = IPersonConstr.One().Build();
 
             // criar Moq da função findbyid
             var person = _person.Setup(o => o.FindById(It.IsAny<int>())).ReturnsAsync(personMock);
@@ -64,6 +63,34 @@ namespace Application.Test
             //verifica
             Assert.AreEqual(null, result.Result);
 
+        }
+        [Test]
+        public void CreateSuccess()
+        {
+            var personMock = IPersonConstr.One().Standard();
+            var person = _person.Setup(o => o.Create(personMock)).ReturnsAsync(personMock);
+            var result = _person.Object.Create(personMock);
+            Assert.Multiple(() =>
+            {
+                Assert.That(result.Result, Is.EqualTo(personMock));
+                Assert.That(result.Result.Id, Is.EqualTo(personMock.Id));
+                Assert.That(result.Result.Name, Is.EqualTo(personMock.Name));
+
+            });
+        }
+        [Test]
+        public void DeleteSuccess()
+        {
+            var personMock = IPersonConstr.One().Standard();
+            var person = _person.Setup(o => o.Delete(personMock.Id)).ReturnsAsync(true);
+            var result = _person.Object.Delete(personMock.Id);
+            Assert.Multiple(() =>
+            {
+              
+                Assert.That(result.Result, Is.EqualTo(true));
+               
+
+            });
         }
 
         [TearDown]

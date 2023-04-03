@@ -38,8 +38,10 @@ namespace WebApi.Controllers
         {
             var result = await _personService.Create(personDTO);
             if (result.Code == 400) return BadRequest(result);
-            return Ok(result.Data);
-            
+           //return Ok(result.Data);
+            return Created("Created",result.Data);
+          // or return StatusCode(201,result.Data);
+           
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)

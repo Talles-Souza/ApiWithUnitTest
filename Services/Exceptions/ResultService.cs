@@ -35,6 +35,10 @@ namespace Services.Exceptions
         public static ResultService Ok(int code,string message) => new ResultService { Code = code, Message = message };
         public static ResultService<T> Ok<T>(int code,T Data) => new ResultService<T> { Code = code, Data = Data };
 
+        public static ResultService<T> Ok<T>(int v, object value)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class ResultService<T> : ResultService
     {
