@@ -1,48 +1,25 @@
 ﻿using AutoFixture;
 using Domain.Entities;
-using Domain.Repositories;
-using Moq;
-using System.Xml.Linq;
+using UnitTest;
 
 namespace Application.Test
 {
-    public class IPersonConstr
+   
+    public class IPersonConstr : BaseConstr<Person>
     {
-       protected readonly Mock<Person> _person;
-       protected readonly Fixture _fixture;
-        protected IPersonConstr(Mock<Person> mUser, Fixture fixture)
-        {
-            _person = mUser;
-            _fixture = fixture;
-        }
+        public IPersonConstr() : base() { }
 
         public static IPersonConstr One()
         {
-            return new IPersonConstr(new Mock<Person>(), new Fixture());
+            return new IPersonConstr();
         }
-        public Person Build() { return _person.Object; }
-
         public Person Standard()
         {
-            _person.Object.Id = _fixture.Create<int>();
-            _person.Object.Name = _fixture.Create<string>();
-            _person.Object.Email = _fixture.Create<string>();
-            return _person.Object;
+            _mock.Object.Id = _fixture.Create<int>();
+            _mock.Object.Name = _fixture.Create<string>();
+            _mock.Object.Email = _fixture.Create<string>();
+            return _mock.Object;
         }
-        public IPersonConstr WithId(int id)
-        {
-            _person.Object.Id = id;
-            return this;
-        }
-        public IPersonConstr WithName(string name)
-        {
-            _person.Object.Name = name;
-            return this;
-        }
-        public IPersonConstr WithEmail(string email)
-        {
-            _person.Object.Email = email;
-            return this;
-        }
+    
     }
 }
